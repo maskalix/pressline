@@ -84,8 +84,6 @@ version.php     Single source of truth for $version
 
 CSRF token on every POST. Prepared statements everywhere. Bcrypt password hashes. MIME and extension whitelists on uploads. The plugin extractor refuses paths with `..`, leading `/`, or `.git/`. Hard 5 MB compressed / 25 MB extracted limits on plugin packages.
 
-Found a vulnerability? Email **security@pressline.app**.
-
 ## Contributing
 
 Run `php -l` on changed files. Test on a clean install. Add a `migrations/*.sql` if you touch the schema. Bump `version.php` (semver).
