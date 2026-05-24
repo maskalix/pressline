@@ -52,8 +52,8 @@ foreach ($websetsArray as $webset) {
     $websets[$webset['key']] = $webset['value'];
 }
 
-$from = $websets['from'] ?? "no-reply@pressline.app";
-$smtp_host = $websets['smtp_host'] ?? "smtp.seznam.cz";
+$from = $websets['from'] ?? "your@mail.address";
+$smtp_host = $websets['smtp_host'] ?? "smtp.mail.address";
 $smtp_port = $websets['smtp_port'] ?? 465;
 $smtp_user = $websets['smtp_user'] ?? $from;
 $smtp_pass = $websets['smtp_pass'] ?? "";
