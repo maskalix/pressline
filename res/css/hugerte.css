@@ -1,0 +1,73 @@
+@import "./variables.css";
+
+body {
+    background-color: var(--accent-0t1);
+    font-family: var(--font2);
+    color: var(--primary-0t8);
+    line-height: 1.4;
+    margin: 1rem;
+}
+
+a {
+    color: var(--accent);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table:not([cellpadding]) td,
+table:not([cellpadding]) th {
+    padding: 0.4rem;
+}
+
+table[border]:not([border="0"]):not([style*=border-width]) td,
+table[border]:not([border="0"]):not([style*=border-width]) th {
+    border-width: 1px;
+}
+
+table[border]:not([border="0"]):not([style*=border-style]) td,
+table[border]:not([border="0"]):not([style*=border-style]) th {
+    border-style: solid;
+}
+
+table[border]:not([border="0"]):not([style*=border-color]) td,
+table[border]:not([border="0"]):not([style*=border-color]) th {
+    border-color: var(--terciary);
+}
+
+figure {
+    display: table;
+    margin: 1rem auto;
+}
+
+figure figcaption {
+    color: var(--terciary);
+    display: block;
+    margin-top: 0.25rem;
+    text-align: center;
+}
+
+hr {
+    border-color: var(--terciary);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+}
+
+code {
+    background-color: var(--terciary);
+    border-radius: var(--border-radius-1);
+    padding: 0.1rem 0.2rem;
+}
+
+.rte-content-body:not([dir=rtl]) blockquote {
+    border-left: 2px solid var(--terciary);
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+.rte-content-body[dir=rtl] blockquote {
+    border-right: 2px solid var(--terciary);
+    margin-right: 1.5rem;
+    padding-right: 1rem;
+}

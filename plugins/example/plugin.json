@@ -1,0 +1,12 @@
+{
+    "id": "example",
+    "name": "Example Plugin",
+    "version": "1.0.0",
+    "author": "PressLine",
+    "homepage": "https://lnln.eu",
+    "description": "Reference plugin demonstrating PressLine's hook API: article save logging, dashboard card, custom menu item.",
+    "min_pressline": "1.5",
+    "permissions": ["articles.read"],
+    "hooks": ["article.afterSave", "admin.menu", "admin.dashboardCards"],
+    "entry": "plugin.php"
+}

@@ -1,0 +1,410 @@
+/*
+ * PressLine Admin - Design System
+ * Minimal Black & White Design (matches pressline.app)
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
+:root {
+    /* Typography */
+    --font-sans: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-serif: "EB Garamond", "Georgia", "Times New Roman", serif;
+    --font1: var(--font-sans);
+    --font2: var(--font-sans);
+
+    /* Type Scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+
+    /* Line Heights */
+    --leading-none: 1;
+    --leading-tight: 1.2;
+    --leading-snug: 1.35;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+
+    /* Border Radius */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-full: 9999px;
+    --border-radius-1: var(--radius);
+    --border-radius-2: var(--radius-sm);
+
+    /* Spacing */
+    --space-0: 0;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* Shadows */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+    /* Transitions */
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 150ms var(--ease);
+    --transition: 200ms var(--ease);
+    --transition-slow: 300ms var(--ease);
+
+    /* Blur (legacy) */
+    --blurness-low: blur(4px);
+    --blurness-high: blur(16px);
+
+    /* Container */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+
+    /* Misc legacy */
+    --tox: 0.9;
+    color-scheme: light dark;
+}
+
+/*
+ * Default = Dark Mode (admin defaults to dark)
+ */
+:root,
+:root.dark {
+    /* Backgrounds */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #0f0f0f;
+    --bg-tertiary: #171717;
+    --bg-quaternary: #262626;
+    --bg-hover: rgba(255, 255, 255, 0.06);
+    --bg-muted: #0d0d0d;
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #d4d4d4;
+    --text-muted: #737373;
+    --text-disabled: #525252;
+    --text-inverse: #000000;
+
+    /* Accent (default blue) */
+    --accent: #5a9fff;
+    --accent-hover: #7ab4ff;
+    --accent-light: rgba(90, 159, 255, 0.12);
+    --accent-0t9: rgba(90, 159, 255, 0.9);
+    --accent-0t8: rgba(90, 159, 255, 0.8);
+    --accent-0t7: rgba(90, 159, 255, 0.7);
+    --accent-0t6: rgba(90, 159, 255, 0.6);
+    --accent-0t5: rgba(90, 159, 255, 0.5);
+    --accent-0t4: rgba(90, 159, 255, 0.4);
+    --accent-0t3: rgba(90, 159, 255, 0.3);
+    --accent-0t2: rgba(90, 159, 255, 0.2);
+    --accent-0t1: rgba(90, 159, 255, 0.1);
+    --accent-0t05: rgba(90, 159, 255, 0.05);
+
+    /* Status */
+    --success: #22c55e;
+    --success-light: rgba(34, 197, 94, 0.15);
+    --success-0t9: rgba(34, 197, 94, 0.9);
+    --success-0t7: rgba(34, 197, 94, 0.7);
+    --success-0t5: rgba(34, 197, 94, 0.5);
+    --success-0t3: rgba(34, 197, 94, 0.3);
+    --success-0t2: rgba(34, 197, 94, 0.2);
+    --success-0t1: rgba(34, 197, 94, 0.1);
+
+    --danger: #ef4444;
+    --error: #ef4444;
+    --danger-light: rgba(239, 68, 68, 0.15);
+    --error-0t9: rgba(239, 68, 68, 0.9);
+    --error-0t7: rgba(239, 68, 68, 0.7);
+    --error-0t5: rgba(239, 68, 68, 0.5);
+    --error-0t3: rgba(239, 68, 68, 0.3);
+    --error-0t2: rgba(239, 68, 68, 0.2);
+    --error-0t1: rgba(239, 68, 68, 0.1);
+
+    --warning: #eab308;
+    --warn: #eab308;
+    --warning-light: rgba(234, 179, 8, 0.15);
+    --warn-0t9: rgba(234, 179, 8, 0.9);
+    --warn-0t7: rgba(234, 179, 8, 0.7);
+    --warn-0t5: rgba(234, 179, 8, 0.5);
+    --warn-0t3: rgba(234, 179, 8, 0.3);
+    --warn-0t2: rgba(234, 179, 8, 0.2);
+    --warn-0t1: rgba(234, 179, 8, 0.1);
+
+    --info: #38bdf8;
+    --info-light: rgba(56, 189, 248, 0.15);
+    --info-0t5: rgba(56, 189, 248, 0.5);
+    --info-0t2: rgba(56, 189, 248, 0.2);
+
+    /* Borders */
+    --border: #262626;
+    --border-light: #1f1f1f;
+    --border-strong: #404040;
+
+    /* Glass */
+    --bg-blur: rgba(10, 10, 10, 0.85);
+
+    /* Legacy aliases */
+    --primary: var(--text-primary);
+    --primary-0t9: rgba(255, 255, 255, 0.9);
+    --primary-0t8: rgba(255, 255, 255, 0.8);
+    --primary-0t7: rgba(255, 255, 255, 0.7);
+    --primary-0t6: rgba(255, 255, 255, 0.6);
+    --primary-0t5: rgba(255, 255, 255, 0.5);
+    --primary-0t4: rgba(255, 255, 255, 0.4);
+    --primary-0t3: rgba(255, 255, 255, 0.3);
+    --primary-0t2: rgba(255, 255, 255, 0.2);
+    --primary-0t1: rgba(255, 255, 255, 0.1);
+
+    --secondary: var(--bg-primary);
+    --secondary-0t9: rgba(10, 10, 10, 0.9);
+    --secondary-0t8: rgba(10, 10, 10, 0.8);
+    --secondary-0t5: rgba(10, 10, 10, 0.5);
+    --secondary-0t3: rgba(10, 10, 10, 0.3);
+    --secondary-0t1: rgba(10, 10, 10, 0.1);
+
+    --terciary: var(--text-muted);
+    --terciary-0t9: rgba(115, 115, 115, 0.9);
+    --terciary-0t7: rgba(115, 115, 115, 0.7);
+    --terciary-0t5: rgba(115, 115, 115, 0.5);
+    --terciary-0t3: rgba(115, 115, 115, 0.3);
+    --terciary-0t2: rgba(115, 115, 115, 0.2);
+    --terciary-0t1: rgba(115, 115, 115, 0.1);
+
+    color-scheme: dark;
+}
+
+/*
+ * Light Mode
+ */
+:root.light {
+    --tox: 0.15;
+
+    /* Backgrounds */
+    --bg-primary: #ffffff;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f5f5f5;
+    --bg-quaternary: #ebebeb;
+    --bg-hover: rgba(0, 0, 0, 0.04);
+    --bg-muted: #fafafa;
+
+    /* Text */
+    --text-primary: #000000;
+    --text-secondary: #404040;
+    --text-muted: #737373;
+    --text-disabled: #a3a3a3;
+    --text-inverse: #ffffff;
+
+    /* Accent (default blue) */
+    --accent: #2782ff;
+    --accent-hover: #1a6fdf;
+    --accent-light: rgba(39, 130, 255, 0.08);
+    --accent-0t9: rgba(39, 130, 255, 0.9);
+    --accent-0t8: rgba(39, 130, 255, 0.8);
+    --accent-0t7: rgba(39, 130, 255, 0.7);
+    --accent-0t6: rgba(39, 130, 255, 0.6);
+    --accent-0t5: rgba(39, 130, 255, 0.5);
+    --accent-0t4: rgba(39, 130, 255, 0.4);
+    --accent-0t3: rgba(39, 130, 255, 0.3);
+    --accent-0t2: rgba(39, 130, 255, 0.2);
+    --accent-0t1: rgba(39, 130, 255, 0.1);
+    --accent-0t05: rgba(39, 130, 255, 0.05);
+
+    /* Status */
+    --success: #16a34a;
+    --success-light: rgba(22, 163, 74, 0.1);
+    --success-0t9: rgba(22, 163, 74, 0.9);
+    --success-0t7: rgba(22, 163, 74, 0.7);
+    --success-0t5: rgba(22, 163, 74, 0.5);
+    --success-0t3: rgba(22, 163, 74, 0.3);
+    --success-0t2: rgba(22, 163, 74, 0.2);
+    --success-0t1: rgba(22, 163, 74, 0.1);
+
+    --danger: #dc2626;
+    --error: #dc2626;
+    --danger-light: rgba(220, 38, 38, 0.1);
+    --error-0t9: rgba(220, 38, 38, 0.9);
+    --error-0t7: rgba(220, 38, 38, 0.7);
+    --error-0t5: rgba(220, 38, 38, 0.5);
+    --error-0t3: rgba(220, 38, 38, 0.3);
+    --error-0t2: rgba(220, 38, 38, 0.2);
+    --error-0t1: rgba(220, 38, 38, 0.1);
+
+    --warning: #ca8a04;
+    --warn: #ca8a04;
+    --warning-light: rgba(202, 138, 4, 0.1);
+    --warn-0t9: rgba(202, 138, 4, 0.9);
+    --warn-0t7: rgba(202, 138, 4, 0.7);
+    --warn-0t5: rgba(202, 138, 4, 0.5);
+    --warn-0t3: rgba(202, 138, 4, 0.3);
+    --warn-0t2: rgba(202, 138, 4, 0.2);
+    --warn-0t1: rgba(202, 138, 4, 0.1);
+
+    --info: #0284c7;
+    --info-light: rgba(2, 132, 199, 0.1);
+    --info-0t5: rgba(2, 132, 199, 0.5);
+    --info-0t2: rgba(2, 132, 199, 0.2);
+
+    /* Borders */
+    --border: #e5e5e5;
+    --border-light: #f0f0f0;
+    --border-strong: #d4d4d4;
+
+    /* Glass */
+    --bg-blur: rgba(255, 255, 255, 0.9);
+
+    /* Legacy aliases */
+    --primary: var(--text-primary);
+    --primary-0t9: rgba(0, 0, 0, 0.9);
+    --primary-0t8: rgba(0, 0, 0, 0.8);
+    --primary-0t7: rgba(0, 0, 0, 0.7);
+    --primary-0t6: rgba(0, 0, 0, 0.6);
+    --primary-0t5: rgba(0, 0, 0, 0.5);
+    --primary-0t4: rgba(0, 0, 0, 0.4);
+    --primary-0t3: rgba(0, 0, 0, 0.3);
+    --primary-0t2: rgba(0, 0, 0, 0.2);
+    --primary-0t1: rgba(0, 0, 0, 0.1);
+
+    --secondary: var(--bg-primary);
+    --secondary-0t9: rgba(255, 255, 255, 0.9);
+    --secondary-0t8: rgba(255, 255, 255, 0.8);
+    --secondary-0t5: rgba(255, 255, 255, 0.5);
+    --secondary-0t3: rgba(255, 255, 255, 0.3);
+    --secondary-0t1: rgba(255, 255, 255, 0.1);
+
+    --terciary: var(--text-muted);
+    --terciary-0t9: rgba(115, 115, 115, 0.9);
+    --terciary-0t7: rgba(115, 115, 115, 0.7);
+    --terciary-0t5: rgba(115, 115, 115, 0.5);
+    --terciary-0t3: rgba(115, 115, 115, 0.3);
+    --terciary-0t2: rgba(115, 115, 115, 0.2);
+    --terciary-0t1: rgba(115, 115, 115, 0.1);
+
+    color-scheme: light;
+}
+
+/*
+ * AMOLED Mode (extends dark)
+ */
+:root.amoled {
+    --bg-primary: #000000;
+    --bg-secondary: #000000;
+    --bg-tertiary: #0a0a0a;
+    --bg-quaternary: #1a1a1a;
+    --border: #1a1a1a;
+    --border-light: #0f0f0f;
+    --border-strong: #262626;
+    --bg-blur: rgba(0, 0, 0, 0.9);
+
+    color-scheme: dark;
+}
+
+/*
+ * Accent color variants
+ */
+:root:is(.light, .dark, .amoled).green {
+    --accent: #22c55e;
+    --accent-hover: #16a34a;
+    --accent-light: rgba(34, 197, 94, 0.12);
+    --accent-0t9: rgba(34, 197, 94, 0.9);
+    --accent-0t8: rgba(34, 197, 94, 0.8);
+    --accent-0t7: rgba(34, 197, 94, 0.7);
+    --accent-0t6: rgba(34, 197, 94, 0.6);
+    --accent-0t5: rgba(34, 197, 94, 0.5);
+    --accent-0t4: rgba(34, 197, 94, 0.4);
+    --accent-0t3: rgba(34, 197, 94, 0.3);
+    --accent-0t2: rgba(34, 197, 94, 0.2);
+    --accent-0t1: rgba(34, 197, 94, 0.1);
+    --accent-0t05: rgba(34, 197, 94, 0.05);
+}
+
+:root:is(.light, .dark, .amoled).red {
+    --accent: #ef4444;
+    --accent-hover: #dc2626;
+    --accent-light: rgba(239, 68, 68, 0.12);
+    --accent-0t9: rgba(239, 68, 68, 0.9);
+    --accent-0t8: rgba(239, 68, 68, 0.8);
+    --accent-0t7: rgba(239, 68, 68, 0.7);
+    --accent-0t6: rgba(239, 68, 68, 0.6);
+    --accent-0t5: rgba(239, 68, 68, 0.5);
+    --accent-0t4: rgba(239, 68, 68, 0.4);
+    --accent-0t3: rgba(239, 68, 68, 0.3);
+    --accent-0t2: rgba(239, 68, 68, 0.2);
+    --accent-0t1: rgba(239, 68, 68, 0.1);
+    --accent-0t05: rgba(239, 68, 68, 0.05);
+}
+
+:root:is(.light, .dark, .amoled).orange {
+    --accent: #f97316;
+    --accent-hover: #ea580c;
+    --accent-light: rgba(249, 115, 22, 0.12);
+    --accent-0t9: rgba(249, 115, 22, 0.9);
+    --accent-0t8: rgba(249, 115, 22, 0.8);
+    --accent-0t7: rgba(249, 115, 22, 0.7);
+    --accent-0t6: rgba(249, 115, 22, 0.6);
+    --accent-0t5: rgba(249, 115, 22, 0.5);
+    --accent-0t4: rgba(249, 115, 22, 0.4);
+    --accent-0t3: rgba(249, 115, 22, 0.3);
+    --accent-0t2: rgba(249, 115, 22, 0.2);
+    --accent-0t1: rgba(249, 115, 22, 0.1);
+    --accent-0t05: rgba(249, 115, 22, 0.05);
+}
+
+:root:is(.light, .dark, .amoled).lila {
+    --accent: #a855f7;
+    --accent-hover: #9333ea;
+    --accent-light: rgba(168, 85, 247, 0.12);
+    --accent-0t9: rgba(168, 85, 247, 0.9);
+    --accent-0t8: rgba(168, 85, 247, 0.8);
+    --accent-0t7: rgba(168, 85, 247, 0.7);
+    --accent-0t6: rgba(168, 85, 247, 0.6);
+    --accent-0t5: rgba(168, 85, 247, 0.5);
+    --accent-0t4: rgba(168, 85, 247, 0.4);
+    --accent-0t3: rgba(168, 85, 247, 0.3);
+    --accent-0t2: rgba(168, 85, 247, 0.2);
+    --accent-0t1: rgba(168, 85, 247, 0.1);
+    --accent-0t05: rgba(168, 85, 247, 0.05);
+}
+
+:root:is(.light, .dark, .amoled).gray {
+    --accent: #737373;
+    --accent-hover: #525252;
+    --accent-light: rgba(115, 115, 115, 0.12);
+    --accent-0t9: rgba(115, 115, 115, 0.9);
+    --accent-0t8: rgba(115, 115, 115, 0.8);
+    --accent-0t7: rgba(115, 115, 115, 0.7);
+    --accent-0t6: rgba(115, 115, 115, 0.6);
+    --accent-0t5: rgba(115, 115, 115, 0.5);
+    --accent-0t4: rgba(115, 115, 115, 0.4);
+    --accent-0t3: rgba(115, 115, 115, 0.3);
+    --accent-0t2: rgba(115, 115, 115, 0.2);
+    --accent-0t1: rgba(115, 115, 115, 0.1);
+    --accent-0t05: rgba(115, 115, 115, 0.05);
+}

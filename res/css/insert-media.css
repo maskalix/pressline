@@ -1,0 +1,89 @@
+@import "./variables.css";
+
+.plugin-modal-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 85vh;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+
+.plugin-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border);
+}
+
+.plugin-modal-header h2 {
+    margin: 0;
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+}
+
+.plugin-modal-header .close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.plugin-modal-header .close:hover {
+    background: var(--bg-quaternary);
+    color: var(--text-primary);
+}
+
+.plugin-modal-content #media-container {
+    overflow-y: auto;
+    padding: var(--space-5);
+    flex: 1;
+}
+
+div#media-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-3);
+}
+
+div#media-list .media-item {
+    cursor: pointer;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all var(--transition-fast);
+    aspect-ratio: 1;
+    position: relative;
+}
+
+div#media-list .media-item:hover {
+    border-color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+div#media-list .media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div#media-list .media-item .file-info,
+div#media-list .media-item .file-name {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}

@@ -1,0 +1,39 @@
+# --- Local config & secrets ---
+pl-config.php
+.env
+.env.*
+*.local.php
+
+# --- Install lock & user data ---
+.installed
+media/uploads/
+media/users/
+media/img/logo-full.png
+media/img/logo-text-*.png
+
+# --- Plugin install dir (populated at runtime by the marketplace) ---
+plugins/*/
+!plugins/example/
+!plugins/.gitkeep
+
+# --- Build / distribution artefacts ---
+dist/
+
+# --- Editor & OS noise ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- Backups & dumps ---
+*.bak
+*.gz
+*.sql.gz
+*.log
+
+# --- Tooling state ---
+.claude/
+_git
+git.sh
+git
